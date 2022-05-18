@@ -9,7 +9,7 @@ x = LpVariable(name="Soldado", lowBound=0, cat=LpInteger)
 y = LpVariable(name="Trem", lowBound=0, cat=LpInteger)
 
 # Add the constraints to the model. Use += to append expressions to the model
-model += (2*x + y <= 100, "Horas de acabamento") #it cannot go past the fence
+model += (2*x + y <= 100, "Horas de acabamento")
 model += (x + y <=  80, "Horas de carpintaria")
 model += (x <= 40, "Max. de soldados")
 
